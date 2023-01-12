@@ -1,8 +1,6 @@
 name: Api gateway service integration
 on:
   pull_request:
-    paths: 
-      - "/api/**"
     branches: [main]
 
 jobs:
@@ -10,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      working-directory: ./api
       - uses: actions/setup-node@v1
         with:
           node-version: 16
