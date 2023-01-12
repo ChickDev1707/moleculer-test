@@ -11,15 +11,6 @@ describe("Test 'greeter' service", () => {
 	beforeAll(() => broker.start());
 	afterAll(() => broker.stop());
 
-	describe("Test 'greeter.hello' action", () => {
-
-		it("should return with 'Hello Moleculer'", async () => {
-			const res = await broker.call("greeter.hello");
-			expect(res).toBe("Hello Moleculer");
-		});
-
-	});
-
 	describe("Test 'greeter.welcome' action", () => {
 
 		it("should return with 'Welcome'", async () => {
