@@ -23,6 +23,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./api
+          context: "{{defaultContext}}:api"
           push: true
           tags: chickdev1707/ms-separated-test:latest
