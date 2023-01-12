@@ -37,7 +37,7 @@ module.exports = {
 				path: "/"
 			},
 			async handler() {
-				return "All posts";
+				return "All posts of service";
 			}
 		},
 	},
