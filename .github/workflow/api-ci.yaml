@@ -1,0 +1,16 @@
+name: Api gateway service integration
+on:
+  pull_request:
+    path: "/api"
+    branches: [main]
+
+jobs:
+  test_api_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm test
