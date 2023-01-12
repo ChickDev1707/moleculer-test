@@ -1,6 +1,8 @@
 name: Api gateway service integration
 on:
   push:
+    paths:
+      - '/api/**'
     branches: [main]
 
 jobs:
@@ -21,8 +23,8 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push
-        uses: chickdev1707/ms-separated-test:latest
+        uses: docker/build-push-action@v3
         with:
-          context: ./api
+          context: "{{defaultContext}}:api"
           push: true
           tags: chickdev1707/ms-separated-test:latest
