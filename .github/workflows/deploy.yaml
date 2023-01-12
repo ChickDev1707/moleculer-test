@@ -1,6 +1,8 @@
 name: Api gateway service integration
 on:
   push:
+    paths:
+      - '/api/**'
     branches: [main]
 
 jobs:
