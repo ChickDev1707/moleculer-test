@@ -1,7 +1,8 @@
 name: Api gateway service integration
 on:
   pull_request:
-    path: "/api"
+    paths: 
+      - "/api/**"
     branches: [main]
 
 jobs:
