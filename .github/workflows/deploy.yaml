@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push
-        uses: chickdev1707/ms-separated-test:latest
+        uses: docker/build-push-action@v3
         with:
           context: ./api
           push: true
