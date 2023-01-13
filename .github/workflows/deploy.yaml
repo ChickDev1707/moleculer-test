@@ -1,4 +1,4 @@
-name: Api gateway service integration
+name: Api gateway service deployment
 on:
   push:
     paths:
