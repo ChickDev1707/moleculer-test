@@ -2,7 +2,7 @@ name: Api gateway service deployment
 on:
   push:
     paths:
-      - '/api/**'
+      - 'api/**'
     branches: [main]
 
 jobs:
